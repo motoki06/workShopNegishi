@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="practice.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>1.5_v-if</title>
+    </head>
+    <body>
+        <div id="app">
+            <!--
+                課題
+                以下のulタグを用いて、
+                practice.js内に定義されている「停車駅一覧」のうち、
+                「特快停車駅のみ」を表示させてください
+            -->
+            <ul v-for="chuoLineStations in stationArray" v-bind:key="chuoLineStations.id">
+                <span v-if="chuoLineStations.isSpecialRapidStop">{{chuoLineStations.name}}</span>
+            </ul>
+        </div>
+    </body>
+</html>
