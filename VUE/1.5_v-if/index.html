@@ -15,8 +15,13 @@
                 practice.js内に定義されている「停車駅一覧」のうち、
                 「特快停車駅のみ」を表示させてください
             -->
-            <ul v-for="chuoLineStations in stationArray" v-bind:key="chuoLineStations.id">
-                <span v-if="chuoLineStations.isSpecialRapidStop">{{chuoLineStations.name}}</span>
+            <ul>
+                <li 
+                    v-for="chuoLineStations in stationArray"
+                    v-if="chuoLineStations.isSpecialRapidStop"
+                >
+                {{chuoLineStations.id}}{{chuoLineStations.name}}
+                </li>
             </ul>
         </div>
     </body>
